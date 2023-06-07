@@ -19,7 +19,7 @@
 
 #include <type_traits>
 
-#include "google/protobuf/port_def.inc"
+#include "google/protobuf/util/converter/port_def.inc"
 
 // ===================================================================
 // emulates google3/base/callback.h
@@ -588,6 +588,6 @@ void PROTOBUF_EXPORT DoNothing();
 }  // namespace protobuf
 }  // namespace google
 
-#include "google/protobuf/port_undef.inc"
+#include "google/protobuf/util/converter/port_undef.inc"
 
 #endif  // GOOGLE_PROTOBUF_STUBS_CALLBACK_H_

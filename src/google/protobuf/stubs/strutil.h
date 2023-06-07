@@ -21,7 +21,7 @@
 #include <stdlib.h>
 
 #include <cstring>
-#include <google/protobuf/port_def.inc>
+#include <google/protobuf/util/converter/port_def.inc>
 #include <vector>
 
 #include "absl/strings/str_cat.h"
@@ -720,6 +720,6 @@ double NoLocaleStrtod(const char* str, char** endptr);
 }  // namespace protobuf
 }  // namespace google
 
-#include <google/protobuf/port_undef.inc>
+#include <google/protobuf/util/converter/port_undef.inc>
 
 #endif  // GOOGLE_PROTOBUF_STUBS_STRUTIL_H__

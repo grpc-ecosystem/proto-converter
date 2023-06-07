@@ -24,7 +24,7 @@
 #include "google/protobuf/stubs/common.h"
 
 // Needs to be last.
-#include "google/protobuf/port_def.inc"  // NOLINT
+#include "google/protobuf/util/converter/port_def.inc"  // NOLINT
 
 namespace google {
 namespace protobuf {
@@ -75,6 +75,6 @@ absl::Status DoAssignOrReturn(T& lhs, absl::StatusOr<T> result) {
 }  // namespace protobuf
 }  // namespace google
 
-#include "google/protobuf/port_undef.inc"  // NOLINT
+#include "google/protobuf/util/converter/port_undef.inc"  // NOLINT
 
 #endif  // GOOGLE_PROTOBUF_STUBS_STATUS_H_

@@ -16,7 +16,6 @@
 
 #include <errno.h>
 #include <float.h>  // FLT_DIG and DBL_DIG
-#include <google/protobuf/stubs/stl_util.h>
 #include <google/protobuf/stubs/strutil.h>
 #include <limits.h>
 #include <stdio.h>
@@ -44,6 +43,12 @@
 
 namespace google {
 namespace protobuf {
+namespace {
+inline char* string_as_array(std::string* str) {
+  // DO NOT USE const_cast<char*>(str->data())! See the unittest for why.
+  return str->empty() ? nullptr : &*str->begin();
+}
+}
 
 // These are defined as macros on some platforms.  #undef them so that we can
 // redefine them.
