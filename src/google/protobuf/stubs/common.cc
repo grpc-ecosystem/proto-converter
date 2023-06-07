@@ -39,7 +39,7 @@
 #include "google/protobuf/stubs/callback.h"
 
 // Must be last.
-#include "google/protobuf/port_def.inc"  // NOLINT
+#include "google/protobuf/util/converter/port_def.inc"  // NOLINT
 
 namespace google {
 namespace protobuf {
@@ -144,4 +144,4 @@ uint32_t ghtonl(uint32_t x) {
 }  // namespace protobuf
 }  // namespace google
 
-#include "google/protobuf/port_undef.inc"  // NOLINT
+#include "google/protobuf/util/converter/port_undef.inc"  // NOLINT

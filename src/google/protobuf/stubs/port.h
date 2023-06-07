@@ -28,7 +28,7 @@
 #include "google/protobuf/stubs/platform_macros.h"
 
 // Must be last.
-#include "google/protobuf/port_def.inc"  // NOLINT
+#include "google/protobuf/util/converter/port_def.inc"  // NOLINT
 
 #undef PROTOBUF_LITTLE_ENDIAN
 #ifdef _WIN32
@@ -278,6 +278,6 @@ class BigEndian {
 }  // namespace protobuf
 }  // namespace google
 
-#include "google/protobuf/port_undef.inc"
+#include "google/protobuf/util/converter/port_undef.inc"
 
 #endif  // GOOGLE_PROTOBUF_STUBS_PORT_H_

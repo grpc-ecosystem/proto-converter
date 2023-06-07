@@ -35,7 +35,7 @@
 #include <pthread.h>
 #endif
 
-#include "google/protobuf/port_def.inc"
+#include "google/protobuf/util/converter/port_def.inc"
 
 namespace std {}
 
@@ -109,6 +109,6 @@ void StrongReference(const T& var) {
 }  // namespace protobuf
 }  // namespace google
 
-#include "google/protobuf/port_undef.inc"
+#include "google/protobuf/util/converter/port_undef.inc"
 
 #endif  // GOOGLE_PROTOBUF_COMMON_H__

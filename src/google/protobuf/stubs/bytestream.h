@@ -46,7 +46,7 @@
 #include "google/protobuf/stubs/common.h"
 
 // Must be last.
-#include "google/protobuf/port_def.inc"  // NOLINT
+#include "google/protobuf/util/converter/port_def.inc"  // NOLINT
 
 class CordByteSink;
 
@@ -339,6 +339,6 @@ class PROTOBUF_EXPORT LimitByteSource : public ByteSource {
 }  // namespace protobuf
 }  // namespace google
 
-#include "google/protobuf/port_undef.inc"  // NOLINT
+#include "google/protobuf/util/converter/port_undef.inc"  // NOLINT
 
 #endif  // GOOGLE_PROTOBUF_STUBS_BYTESTREAM_H_
