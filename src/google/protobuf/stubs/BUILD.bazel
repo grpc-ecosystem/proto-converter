@@ -20,7 +20,7 @@ load("@rules_pkg//:mappings.bzl", "pkg_files", "strip_prefix")
 load("//build_defs:cpp_opts.bzl", "COPTS", "LINK_OPTS")
 
 package(
-     default_visibility = ["//:__subpackages__"],
+    default_visibility = ["//:__subpackages__"],
 )
 
 cc_library(

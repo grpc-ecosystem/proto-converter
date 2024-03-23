@@ -18,7 +18,7 @@ googletest_deps()
 http_archive(
     name = "com_google_protobuf",
     sha256 = "aa61db6ff113a1c76eac9408144c6e996c5e2d6b2410818fd7f1b0d222a50bf8",
-    strip_prefix = "protobuf-315ffb5be89460f2857387d20aefc59b76b8bdc3", # 5.31.2023
+    strip_prefix = "protobuf-315ffb5be89460f2857387d20aefc59b76b8bdc3",  # 5.31.2023
     urls = ["https://github.com/protocolbuffers/protobuf/archive/315ffb5be89460f2857387d20aefc59b76b8bdc3.tar.gz"],
 )
 
@@ -35,4 +35,3 @@ http_archive(
 load("@com_google_protobuf//:protobuf_deps.bzl", "protobuf_deps")
 
 protobuf_deps()
-
