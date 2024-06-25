@@ -88,7 +88,7 @@ class PROTOBUF_EXPORT JsonObjectWriter : public StructuredObjectWriter {
     if (!indent_string.empty()) {
       indent_char_ = indent_string[0];
       indent_count_ = indent_string.length();
-      for (int i = 1; i < indent_string.length(); i++) {
+      for (int i = 1; i < static_cast<int>(indent_string.length()); i++) {
         if (indent_char_ != indent_string_[i]) {
           indent_char_ = '\0';
           indent_count_ = 0;
