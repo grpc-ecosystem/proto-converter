@@ -32,11 +32,9 @@
 #undef PROTOBUF_RETURNS_NONNULL
 #undef PROTOBUF_ATTRIBUTE_REINITIALIZES
 #undef PROTOBUF_RTTI
-#undef PROTOBUF_VERSION
-#undef PROTOBUF_VERSION_SUFFIX
+// Note: PROTOBUF_VERSION and related macros are not undefined here because
+// they are now managed by the external protobuf library, not by our port_def.inc
 #undef PROTOBUF_FIELD_OFFSET
-#undef PROTOBUF_MIN_HEADER_VERSION_FOR_PROTOC
-#undef PROTOBUF_MIN_PROTOC_VERSION
 #undef PROTOBUF_PREDICT_TRUE
 #undef PROTOBUF_PREDICT_FALSE
 #undef PROTOBUF_FALLTHROUGH_INTENDED

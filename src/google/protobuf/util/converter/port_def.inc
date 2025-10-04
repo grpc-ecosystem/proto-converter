@@ -221,25 +221,9 @@ static_assert(PROTOBUF_ABSL_MIN(20230125, 3),
 
 #endif
 
-#ifdef PROTOBUF_VERSION
-#error PROTOBUF_VERSION was previously defined
-#endif
-#define PROTOBUF_VERSION 4023000
-
-#ifdef PROTOBUF_MIN_HEADER_VERSION_FOR_PROTOC
-#error PROTOBUF_MIN_HEADER_VERSION_FOR_PROTOC was previously defined
-#endif
-#define PROTOBUF_MIN_HEADER_VERSION_FOR_PROTOC 4023000
-
-#ifdef PROTOBUF_MIN_PROTOC_VERSION
-#error PROTOBUF_MIN_PROTOC_VERSION was previously defined
-#endif
-#define PROTOBUF_MIN_PROTOC_VERSION 4023000
-
-#ifdef PROTOBUF_VERSION_SUFFIX
-#error PROTOBUF_VERSION_SUFFIX was previously defined
-#endif
-#define PROTOBUF_VERSION_SUFFIX ""
+// Note: PROTOBUF_VERSION and related macros are now defined by the external
+// protobuf library's runtime_version.h. We don't redefine them here to avoid
+// conflicts with the protobuf library's version checking.
 
 #ifdef PROTOBUF_ALWAYS_INLINE
 #error PROTOBUF_ALWAYS_INLINE was previously defined
@@ -447,9 +431,7 @@ static_assert(PROTOBUF_ABSL_MIN(20230125, 3),
 // which the offsets of the direct fields of a class are non-constant.
 // Fields inherited from superclasses *can* have non-constant offsets,
 // but that's not what this macro will be used for.
-#ifdef PROTOBUF_FIELD_OFFSET
-#error PROTOBUF_FIELD_OFFSET was previously defined
-#endif
+#ifndef PROTOBUF_FIELD_OFFSET
 #if defined(__clang__)
 // For Clang we use __builtin_offsetof() and suppress the warning,
 // to avoid Control Flow Integrity and UBSan vptr sanitizers from
@@ -471,6 +453,7 @@ static_assert(PROTOBUF_ABSL_MIN(20230125, 3),
                              &reinterpret_cast<const TYPE*>(16)->FIELD) - \
                          reinterpret_cast<const char*>(16))
 #endif
+#endif  // PROTOBUF_FIELD_OFFSET
 
 #ifdef PROTOBUF_EXPORT
 #error PROTOBUF_EXPORT was previously defined

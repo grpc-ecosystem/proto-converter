@@ -144,7 +144,7 @@ class PROTOBUF_EXPORT DefaultValueObjectWriter : public ObjectWriter {
     Node(const Node&) = delete;
     Node& operator=(const Node&) = delete;
     virtual ~Node() {
-      for (int i = 0; i < children_.size(); ++i) {
+      for (size_t i = 0; i < children_.size(); ++i) {
         delete children_[i];
       }
     }

@@ -132,7 +132,7 @@ std::string GetFullTypeWithUrl(absl::string_view simple_type) {
 const google::protobuf::Option* FindOptionOrNull(
     const RepeatedPtrField<google::protobuf::Option>& options,
     absl::string_view option_name) {
-  for (int i = 0; i < options.size(); ++i) {
+  for (size_t i = 0; i < options.size(); ++i) {
     const google::protobuf::Option& opt = options.Get(i);
     if (opt.name() == option_name) {
       return &opt;

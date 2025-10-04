@@ -384,7 +384,7 @@ void ProtoStreamObjectWriter::AnyWriter::StartAny(const DataPiece& value) {
 
   // Now we know the proto type and can interpret all data fields we gathered
   // before the "@type" field.
-  for (int i = 0; i < uninterpreted_events_.size(); ++i) {
+  for (size_t i = 0; i < uninterpreted_events_.size(); ++i) {
     uninterpreted_events_[i].Replay(this);
   }
 }

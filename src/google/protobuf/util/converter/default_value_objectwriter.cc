@@ -298,7 +298,7 @@ void DefaultValueObjectWriter::Node::PopulateChildren(
   absl::flat_hash_map<absl::string_view, int> orig_children_map;
 
   // Creates a map of child nodes to speed up lookup.
-  for (int i = 0; i < children_.size(); ++i) {
+  for (size_t i = 0; i < children_.size(); ++i) {
     orig_children_map.try_emplace(children_[i]->name_, i);
   }
 
@@ -375,7 +375,7 @@ void DefaultValueObjectWriter::Node::PopulateChildren(
     new_children.push_back(child.release());
   }
   // Adds all leftover nodes in children_ to the beginning of new_child.
-  for (int i = 0; i < children_.size(); ++i) {
+  for (size_t i = 0; i < children_.size(); ++i) {
     if (children_[i] == nullptr) {
       continue;
     }
