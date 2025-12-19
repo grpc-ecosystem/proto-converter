@@ -13,8 +13,21 @@ package(
 )
 
 create_compiler_config_setting(
-    name = "config_msvc",
+    name = "config_msvc_cl",
     value = "msvc-cl",
+)
+
+create_compiler_config_setting(
+    name = "config_clang_cl",
+    value = "clang-cl",
+)
+
+selects.config_setting_group(
+    name = "config_msvc",
+    match_any = [
+        ":config_clang_cl",
+        ":config_msvc_cl",
+    ],
 )
 
 config_setting(
